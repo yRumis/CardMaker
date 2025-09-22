@@ -9,7 +9,10 @@ const mappedBackgrounds = {
 
 const currentCardBack = mappedBackgrounds['fire'];
 
+const isTextWhite = true;
+
     return {
-        currentCardBack
+        currentCardBack,
+        isTextWhite,
     };
 }

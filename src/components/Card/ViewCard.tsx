@@ -1,11 +1,29 @@
 import type { FC } from "react";
-import { CardContainer } from "./styles";
+import { 
+
+    CardContainer,
+    CardNameContainer,
+    CardNameText, 
+    CardSectionForNameAndAtribute 
+
+} from "./styles";
 import type { ICardView } from "./types";
 
-export const  ViewCard: FC<ICardView> = ({currentCardBack}) => { 
+export const  ViewCard: FC<ICardView> = ({
+    currentCardBack,
+    isTextWhite,
+    cardName
+    }) => { 
     return (
-        <CardContainer backGround={currentCardBack}>
 
+        <CardContainer backGround={currentCardBack}>
+            <CardSectionForNameAndAtribute>
+                <CardNameContainer>
+                    <CardNameText isTextWhite={isTextWhite}>
+                        {cardName}
+                    </CardNameText>
+                </CardNameContainer>
+            </CardSectionForNameAndAtribute>
         </CardContainer>
     );
 }
